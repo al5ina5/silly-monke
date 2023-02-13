@@ -14,6 +14,8 @@ export default function Index() {
     const [clicked, setClicked] = useState(false)
 
     return <>
+        {/* preload image */}
+        <img src="/img/crezno-presents.png" alt="" className='hidden' />
 
         {clicked && <CandyParticles />}
 
