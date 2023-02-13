@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#__next {
+    /* @apply bg-zinc-50 text-zinc-800 font-serif; */
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+input {
+    outline: none;
+}
+
+/* * {
+    image-rendering: pixelated;
+} */
