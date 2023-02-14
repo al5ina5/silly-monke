@@ -17,15 +17,17 @@ export default function Index() {
         {/* preload image */}
         <img src="/img/crezno-presents.png" alt="" className='hidden' />
 
-        {clicked && <CandyParticles />}
+        <AnimatePresence>
+            {clicked && <CandyParticles />}
+        </AnimatePresence>
 
-        <motion.div className="fixed z-10 h-full w-full flex flex-col items-center justify-center p-6 bg-cover bg-center pixelated" style={{ backgroundImage: 'url("/img/swirl.gif")' }}>
+        <motion.div className="fixed h-full w-full flex flex-col items-center justify-center p-6 bg-cover bg-center pixelated" style={{ backgroundImage: 'url("/img/swirl.gif")' }}>
 
             <AnimatePresence>
                 {!clicked && <>
                     <motion.div
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 2 }}
+                        transition={{ duration: 1 }}
                         className="flex flex-col items-center justify-center" >
                         <motion.img animate={{ rotate: ['3deg', '-3deg', '3deg'] }} transition={{ duration: 4, repeat: Infinity }} className="max-w-3xl w-full" src="/img/silly-monke-logo.png" alt="" />
                         <button onClick={() => {
@@ -46,8 +48,8 @@ export default function Index() {
                     <motion.div
                         initial={{ opacity: 0, display: 'none' }}
                         animate={{ opacity: [0, 1], display: 'block' }}
-                        transition={{ duration: 4, delay: 3 }}
-                        className="flex flex-col items-center justify-center">
+                        transition={{ duration: 3, delay: 2 }}
+                        className="relative z-30 flex flex-col items-center justify-center">
                         <motion.img animate={{ rotate: ['3deg', '-3deg', '3deg'] }} transition={{ duration: 4, repeat: Infinity }} className="max-w-3xl w-full" src="/img/crezno-presents.png" alt="" />
 
                     </motion.div >
