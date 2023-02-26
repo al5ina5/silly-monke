@@ -19,11 +19,11 @@ export default function MyApp({ Component, pageProps }) {
         <Meta />
         <AppContext.Provider value={{ play }}>
             <SWRConfig value={{ fetcher: url => axios.get(url).then(res => res.data) }}>
-                <div className='bg-black text-white text-xs font-medium p-2'>
+                <div className='bg-yellow-400 text-black text-xs font-medium p-2'>
                     <Ticker>
                         {({ index }) => (
                             <>
-                                <h1>Silly Monke will be minting soon.&nbsp;</h1>
+                                <h1>SILLY MONKE WILL BE MINTING IN A FEW DAY. <a href="" className='underline'>JOIN THE DISCORD TO BE READY.</a>&nbsp;</h1>
                             </>
                         )}
                     </Ticker>
