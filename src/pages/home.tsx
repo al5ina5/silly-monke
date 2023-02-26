@@ -3,16 +3,16 @@ import Link from 'next/link'
 
 export default function Index() {
     return <>
-        <div className="fixed h-full w-full opacity-10" style={{ backgroundImage: 'url("/img/swirl.gif")' }}></div>
+        <div className="fixed h-full w-full opacity-202 bg-cover bg-center" style={{ backgroundImage: 'url("/img/abstract-bg.png")' }}></div>
         <div className='relative z-10 w-full max-w-screen-2xl mx-auto p-12 py-24 space-y-12 md:space-y-24'>
 
             <div className='flex flex-col md:flex-row space-y-12 md:space-y-0 gap-12 md:gap-24 justify-center'>
                 <div>
                     <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
                         <Link href="/"><img className='w-64' src="/img/button-home.png" alt="" /></Link>
-                        <Link href="/mint"><img className='w-64' src="/img/button-mint.png" alt="" /></Link>
-                        <Link href="/collection"><img className='w-64' src="/img/button-collection.png" alt="" /></Link>
                         <Link href="/about"><img className='w-64' src="/img/button-about.png" alt="" /></Link>
+                        <Link href="#" className='opacity-25 cursor-not-allowed'><img className='w-64' src="/img/button-mint.png" alt="" /></Link>
+                        <Link href="#" className='opacity-25 cursor-not-allowed'><img className='w-64' src="/img/button-collection.png" alt="" /></Link>
                     </div>
                 </div>
 

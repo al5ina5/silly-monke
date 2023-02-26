@@ -21,7 +21,7 @@ export default function Index() {
             {clicked && <CandyParticles />}
         </AnimatePresence>
 
-        <motion.div className="fixed h-full w-full flex flex-col items-center justify-center p-6 bg-cover bg-center pixelated" style={{ backgroundImage: 'url("/img/swirl.gif")' }}>
+        <motion.div className="fixed h-full w-full flex flex-col items-center justify-center p-6 bg-cover bg-center" style={{ backgroundImage: 'url("/img/abstract-bg-2.png")' }}>
 
             <AnimatePresence>
                 {!clicked && <>

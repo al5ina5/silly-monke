@@ -5,6 +5,8 @@ import axios from 'axios'
 import useSound from 'use-sound';
 import { useContext, createContext } from 'react';
 import Meta from '../components/Meta';
+import Banner from '../components/Banner';
+import Ticker from 'react-ticker';
 
 
 export const AppContext = createContext({})
@@ -17,6 +19,15 @@ export default function MyApp({ Component, pageProps }) {
         <Meta />
         <AppContext.Provider value={{ play }}>
             <SWRConfig value={{ fetcher: url => axios.get(url).then(res => res.data) }}>
+                <div className='bg-black text-white text-xs font-medium p-2'>
+                    <Ticker>
+                        {({ index }) => (
+                            <>
+                                <h1>Silly Monke will be minting soon.&nbsp;</h1>
+                            </>
+                        )}
+                    </Ticker>
+                </div>
                 <Component {...pageProps} />
             </SWRConfig>
         </AppContext.Provider>
