@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }) {
                     <Ticker>
                         {({ index }) => (
                             <>
-                                <h1>SILLY MONKE WILL BE MINTING IN A FEW DAY. <a href="" className='underline'>JOIN THE DISCORD TO BE READY.</a>&nbsp;</h1>
+                                <h1>MINT IN A FEW DAY. <a href="" className='underline'>JOIN DISCORD.</a> MEET HOT SINGLE MONKE.&nbsp;</h1>
                             </>
                         )}
                     </Ticker>
